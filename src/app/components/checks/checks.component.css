@@ -1,0 +1,15 @@
+.registro {
+	color: white;
+	cursor: pointer;
+	background: rgba(53, 103, 164, 1);
+	border: 1px solid rgba(53, 103, 164, 1);
+	font-size: 17px;
+    margin-top: 15px;
+	margin-right: 15px;
+	padding: 10px;
+    text-decoration: none
+}
+
+.container2 .container {
+    width: inherit;
+}

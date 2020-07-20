@@ -1,0 +1,26 @@
+<div class="contenedor">
+    <h2>{{ title }}</h2>
+    
+    <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- Name Column -->
+        <ng-container matColumnDef="healthy">
+          <mat-header-cell *matHeaderCellDef> Sanos </mat-header-cell>
+          <mat-cell *matCellDef="let stat"> {{stat.healthy}} </mat-cell>
+        </ng-container>
+      
+        <!-- Country Column -->
+        <ng-container matColumnDef="infected">
+          <mat-header-cell *matHeaderCellDef> Infectados </mat-header-cell>
+          <mat-cell *matCellDef="let stat"> {{stat.infected}} </mat-cell>
+        </ng-container>
+      
+        <!-- Result Column -->
+        <ng-container matColumnDef="immune">
+          <mat-header-cell *matHeaderCellDef> Inmunes </mat-header-cell>
+          <mat-cell *matCellDef="let stat"> {{stat.immune}} </mat-cell>
+        </ng-container>
+      
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+</div>
